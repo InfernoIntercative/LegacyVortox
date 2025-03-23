@@ -6,44 +6,34 @@ Vortox is a super-optimized 3D game engine designed to deliver high performance 
 
 ## Features ✨
 
-- **3D Rendering**: Full support for 3D graphics using OpenGL. 🌐
-- **Raycasting**: Raycasting implementation for simulating light and shadows. 🌞🌑
+- **3D Rendering**: Full support for 3D graphics using OpenGL. 🌐 (LIE!)
 - **Performance**: Focused on optimization and efficient resource usage. ⚡
 - **Extensibility**: The engine is designed to be easily extensible, allowing you to add new features as needed. 🔧
 
 ## Requirements ⚙️
 
 > [!WARNING]
-> Windows platforms are not supported in this Beta release. 🚫
+> Windows platforms are not supported in this Never release. 🚫
 
 - **Operating System**: Linux 🐧
-- **Language**: C++11 or later
+- **Language**: G++ with C++20
 - **Libraries**: OpenGL, GLFW, GLEW (or others depending on your setup) 📚
 - **Others**: Ensure that you have the appropriate graphics driver installed. 🎮
 
-> [!TIP]
-> You can help us by using the --debug flag on!
-
 ## How to Use 🛠️
 
-1. Clone the repository:
-
-   ```bashVortox
-   git clone https://github.com/Vortox/Vortox.git
-
-   ```
+1. Clone the repository
 
 2. Build the engine:
 
    ```bash
    ./build.sh
-   Vortox
    ```
 
-3. Run:Vortox
+3. Run Vortox (if build.sh didn't run it)
 
    ```bash
-   ./bin/VortoxEngineVortox
+   ./build/bin/Vortox
    ```
 
 # Contributing 🤝
