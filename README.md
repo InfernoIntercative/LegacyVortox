@@ -44,6 +44,10 @@ If you want to contribute to Vortox, feel free to open a pull request or an issu
 
 This project is licensed under the Vortox License - see the LICENSE file for details.
 
+# DevLog 📜
+
+This is my Dev Log, [here!](devlog.MD)
+
 # Contact 📬
 
 - Company: Inferno Interactive
