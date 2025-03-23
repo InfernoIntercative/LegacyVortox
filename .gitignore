@@ -1,0 +1,10 @@
+# Ignore the compiled Vortox, Fuck you if you want the compiled Vortox
+build/
+
+# IDE Files
+*.vscode/
+*.idea/
+
+# Temp files
+*.log
+*.tmp

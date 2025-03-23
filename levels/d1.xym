@@ -1,0 +1,28 @@
+level_version= 4.21
+branch=stable
+{
+    level_song= "resources/songs/demo.ogg"
+    creator= russian95
+    description= "test level for the Vortox"
+    ambient_light= 0.0
+}
+
+[LEVELDATA]
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 0 1 0 0 0 0 0 0 0 0 0 1 0 1
+1 0 1 0 0 0 0 0 0 0 0 0 0 0 1
+1 0 1 0 1 0 0 0 0 0 0 0 0 0 1
+1 0 1 0 0 0 0 0 0 0 0 0 0 0 1
+1 0 0 0 0 0 0 0 0 1 0 0 0 0 1
+1 0 1 0 0 0 0 0 0 0 0 0 0 0 1
+1 0 1 0 0 1 0 0 0 0 0 0 0 0 1
+1 0 1 0 0 0 0 0 0 0 0 0 0 0 1
+1 0 1 0 0 0 0 0 0 0 0 0 0 0 1
+1 0 1 0 0 0 0 1 1 1 1 1 1 1 1
+1 0 1 0 0 0 0 1 0 0 0 0 0 0 1
+1 0 1 0 0 0 0 1 0 0 0 1 0 0 1
+1 1 1 1 1 1 0 1 0 1 1 1 1 1 1
+
+[TEXTURES]
+skybox=resources/skybox/default.png
+1=resources/textures/brick.png
