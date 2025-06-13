@@ -1,4 +1,3 @@
-#include <SDL2/SDL_error.h>
 #include <cmath>
 #include <cstdio>
 #include <cstdlib>
@@ -12,11 +11,12 @@
 #include <SDL2/SDL_image.h>
 #include <SDL2/SDL_mixer.h>
 #include <SDL2/SDL_ttf.h>
+#include <SDL2/SDL_error.h>
 
 #include <GL/gl.h>
 #include <GL/glu.h>
 
-// engine files
+// headers
 #include "../console/console.hpp"
 #include "../fonts/fonts.hpp"
 #include "../graphics/graphics.hpp"
@@ -25,9 +25,6 @@
 #include "../player/player.hpp"
 #include "core.hpp"
 #include "types.hpp"
-
-// engine vars
-// nothing now btw
 
 // global vars
 bool party = true;
@@ -43,8 +40,8 @@ float       delta_time = 0.0f;        // do not remove bitch, i am warning you
 char  wallsTexture[];
 char  skybox[];
 char  song_level[];
-char  creator[256]; // needs to be manual 256
-char  description[256]; // also needs to be manual 256
+char  creator[];
+char  description[];
 float ambient_light = 0.0f;
 
 // cache textures
@@ -53,7 +50,7 @@ std::unordered_map<std::string, GLuint> textureCache;
 // function to load textures from files
 GLuint load_texture(const char *filename) {
     // copy the input filename into a clean variable, removing any trailing newline characters
-    char clean_filename[256];
+    char clean_filename[];
     strncpy(clean_filename, filename, sizeof(clean_filename) - 1);
     clean_filename[sizeof(clean_filename) - 1]      = '\0';
     clean_filename[strcspn(clean_filename, "\r\n")] = 0;
@@ -76,7 +73,7 @@ GLuint load_texture(const char *filename) {
         exit(EXIT_FAILURE);
     }
 
-    if (GENERAL_DEBUG) {
+    if (G_debug) {
         debug("Loading texture from", clean_filename);
     }
 
@@ -133,7 +130,7 @@ int setup_projection() {
     GLenum previous_error = glGetError(); // stores any existing GL errors
     if (previous_error != GL_NO_ERROR)    // checks if there are any existing GL errors
     {
-        fprintf(stderr, "Warning: Existing GL error: 0x%x\n", previous_error);
+        warn("OpenGL error before setup_projection: 0x%x", previous_error);
     }
 
     glMatrixMode(GL_PROJECTION);                                   // switches to the projection matrix mode
@@ -244,7 +241,7 @@ int main() {
     }
     glEnable(GL_MULTISAMPLE);
 
-    if (GENERAL_DEBUG) {
+    if (G_debug) {
         debug("Loading default level...");
     }
     if (load_levels(defaultLevelsPath) != 0) {
@@ -319,7 +316,7 @@ int main() {
         }
 
         // debug info
-        if (CAMERA_DEBUG) {
+        if (G_cameraDebug) {
             printf("Camera: pos(%.2f, %.2f, %.2f), yaw: %.2f\n",
                    camerapos.x, camerapos.y, camerapos.z, yaw);
         }

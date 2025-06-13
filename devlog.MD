@@ -1,5 +1,5 @@
 # Russian95
-#### 22/03/2025 - 11:44 PM
+#### 03/22/2025 - 11:44 PM
 
 So, there we were, when I wrote this code, I really didn't know what the fuck I was doing. I didn't know much C/C++, so I was stuck. But, thanks a lot to Stack Overflow digging, I made my worst decision for this engine. I used 2.5D style, dude, what the fuck, why did I do that?
 
@@ -8,3 +8,7 @@ So, somes days, after a lot of stress, I finally decided to rewrite the damn, ba
 I swear to god, I will never update this rusty 2.5D old code. I swear...
 
 Good-bye mess code! You only served as an example for me in future to not write bad code...
+
+#### 06/13/2025 - 4:02 PM
+
+I was wrong.
